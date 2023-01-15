@@ -170,6 +170,115 @@ nav .nav-title {
 .overley-btn span{
   font-size: 65px;
 }
+/* ----------------
+    plan section
+------------------- */
+
+#plansec{
+  background: white;
+  margin-top: 300px;
+  text-transform: capitalize;
+}
+.price-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.bnr.planbnr {
+  margin-top: -60px;
+
+}
+.pricing{
+ text-align: center;
+ background-color: #f9f9ff;
+ padding: 40px 20px;
+}
+.single-pricebox{
+  transition: all 0.3s ease 0s;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f9f9ff;
+  padding: 18px 40px;
+}
+.pack-no{
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+  width: 140px;
+  height: 140px;
+  background-color: rgba(132, 144, 255, 0.1);
+  border-radius: 100px;
+  align-items: center;
+  display: grid;
+  border: 30px solid rgba(132, 144, 255, 0.1);
+  justify-content: center;
+  justify-items: center;
+}
+.mt-10{
+  text-transform: capitalize;
+  margin-top: 10px;
+  padding: 5px 0px;
+  border-top: 1px solid #eee;
+}
+.pack-list{
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
+ul.price-ul li {
+  list-style: none;
+  text-transform: capitalize;
+  padding: 10px 0px;
+  border-top: 1px solid #eee;
+}
+ul.price-ul li:last-child{
+  border-bottom: 1px solid #eee; ;
+}
+.top-part h4{
+  font-size: 25px;
+  margin-top: 5px;
+}
+.bottom-part{
+  transition: all 0.3s ease 0s;
+}
+.bottom-part a{
+  text-decoration:none;
+  text-transform: uppercase;
+}
+.bottom-part .price-btn{
+ transition: all 0.3s ease 0s;
+ background-color: #fff;
+ color: #222;
+ padding: 10px 50px;
+ font-weight: 600;
+ display: inline-block;
+ display: none; 
+} 
+.single-pricebox:hover{
+  transform: scale(1.05);
+  z-index: 2;
+  color: #fff;
+  cursor: pointer;
+}
+
+#plansec .single-pricebox:hover{
+  background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+
+}
+#plansec .single-pricebox:hover .pack-no{
+  border-color: rgba(255,255,255,0.21);
+  background-color: rgba(255,255,255,0.1);
+}
+#plansec .single-pricebox:hover .bottom-part .price-btn{
+  display: block;
+}
+#plansec .single-pricebox:hover .bottom-part h1{
+  display: none;
+}
+#plansec .single-pricebox:hover .top-part .pack-no{
+  color: #fff;
+}
+#plansec .single-pricebox:hover .top-part h4{
+  color: #fff;
+}
 /* -------------
   facts section
 ---------------- */
@@ -265,8 +374,9 @@ footer{
   color: var(--dark-2);
 }
 @media screen and (max-width:576px) {
- .feature-container, .skill-container{
+ .feature-container, .skill-container, .price-container{
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
   .facts, .sponsor-logos{
     grid-template-columns: repeat(2, 1fr);
@@ -290,5 +400,8 @@ footer{
   }
   .header-title{
     font-size: 35px;
+  }
+  .single-pricebox{
+    max-width: 500px;
   }
 }
