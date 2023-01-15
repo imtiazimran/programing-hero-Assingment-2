@@ -14,7 +14,7 @@
   --dark-3: #727272;
 }
 .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: auto;
 }
 .section-title {
@@ -72,7 +72,7 @@ nav .nav-title {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  width: 500px;
+  max-width: 500px;
 }
 .nav-title ul li a {
   text-decoration: none;
@@ -81,9 +81,10 @@ nav .nav-title {
   color: var(--dark-2);
 }
 .header-info {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
+  padding: 5px;
   margin-top: 116px;
   margin-bottom: 50px;
 }
@@ -97,7 +98,7 @@ nav .nav-title {
     feature section
 ------------------- */
 .feature {
-  width: 1105px;
+  max-width: 1105px;
 }
 .feature-container {
   display: grid;
@@ -135,7 +136,7 @@ nav .nav-title {
     color: #131313;
 }
 .skill-card{
-    width: 570px;
+    max-width: 570px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 20px;
@@ -155,7 +156,7 @@ nav .nav-title {
 }
 .myimg{
   position: relative;
-  width: 580px;
+  max-width: 580px;
 }
 .myimg img{
   height: 93%;
@@ -164,7 +165,7 @@ nav .nav-title {
   padding: 33px 9px;
   position: absolute;
   bottom: 6px;
-  left: -29px;
+  left: -20px;
 }
 .overley-btn span{
   font-size: 65px;
@@ -173,7 +174,7 @@ nav .nav-title {
   facts section
 ---------------- */
 .facts-section .sub-title{
-  width: 515px;
+  max-width: 515px;
 }
 .facts{
   text-align: center;
@@ -214,7 +215,7 @@ nav .nav-title {
   position: absolute;
   z-index: -1;
   border-radius: 5px;
-  transition: 0.6s ease;
+  transition: 0.4s ease;
   background-color: var(--btn-color);
 }
 .fact:hover .overley{
@@ -231,7 +232,7 @@ nav .nav-title {
   text-align: center;
 }
 .sponsor .sub-title{
-  width: 550px;
+  max-width: 550px;
   margin: auto;
 }
 .sponsor-logos{
@@ -262,4 +263,32 @@ footer{
 .footer-text{
   padding: 20px;
   color: var(--dark-2);
+}
+@media screen and (max-width:576px) {
+ .feature-container, .skill-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .facts, .sponsor-logos{
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+  .section-title{
+    font-size: 35px;
+  }
+  .myimg{
+    display: none;
+  }
+  .overley-btn{
+    bottom: -30px;
+    left: 150px;
+  }
+  section{
+    padding: 10px;
+  }
+  .nav-title{
+    flex-direction: column;
+  }
+  .header-title{
+    font-size: 35px;
+  }
 }
